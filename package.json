@@ -1,0 +1,15 @@
+{
+  "name": "boss-reins",
+  "version": "0.1.0",
+  "description": "A harness that lets a small model do outreach on BOSS Zhipin safely: the model writes, Reins decides when to act.",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node workflow/boss.js self-test",
+    "doctor": "node workflow/boss.js doctor",
+    "preflight": "node workflow/boss.js preflight"
+  },
+  "repository": { "type": "git", "url": "https://github.com/yinren112/BOSS-Reins" },
+  "keywords": ["harness", "agent", "llm", "cdp", "boss-zhipin", "rate-limit", "circuit-breaker", "guardrails"]
+}

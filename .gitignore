@@ -1,0 +1,22 @@
+# 个人数据：永远不进仓库
+reins.config.json
+facts.md
+profiles.json
+data/*
+!data/.gitkeep
+
+# 浏览器 profile：含登录会话
+.edge-debug/
+.workbuddy/
+
+# 运行时
+node_modules/
+*.log
+tmp_*
+*.bak
+*.bak_*
+
+# 系统
+Thumbs.db
+Desktop.ini
+.DS_Store

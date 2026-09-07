@@ -1,0 +1,48 @@
+{
+  "$comment": "复制为 reins.config.json（已 gitignore）后按自己的情况填写。所有个人信息只放这里和 facts.md / profiles.json，代码里不写。",
+  "loginName": "你的BOSS显示名",
+  "cycleStart": "2026-01-01T00:00:00+08:00",
+  "links": {
+    "allowed": ["your-portfolio.example.com", "github.com/your-handle"]
+  },
+  "resumes": {
+    "development": "开发简历.pdf",
+    "aiAgent": "AI简历.pdf",
+    "adjacent": "综合简历.pdf"
+  },
+  "factsFile": "facts.md",
+  "profilesFile": "profiles.json",
+  "opener": {
+    "min": 120,
+    "max": 200,
+    "$factAnchors": "第一句必须命中至少一个：真实项目名或只有做过才说得出的场景词。来自 facts.md 事实卡。",
+    "factAnchors": [
+      "demo-iot", "设备接入", "设备平台", "验收标准", "断电", "冷启动",
+      "demo-crawler", "数据采集", "采集工具", "断点续跑", "验证码自动停",
+      "demo-miniapp", "预约小程序", "微信支付", "防超卖",
+      "demo-dashboard", "数据看板", "下钻", "图表",
+      "前后端、数据库、支付", "运营后台", "报价文档"
+    ],
+    "$bannedNumbers": "曾经被模型刷烂的具体数字：一天几十条开场白写同一个金额/测试数，对老板没有说服力还立了低价锚。写成正则。",
+    "bannedNumbers": ["9\\s*9\\s*9\\s*9", "200\\s*(?:项|条|个)?\\s*(?:子)?测试", "30\\s*个?\\s*页面"],
+    "bannedNumbersHint": ["9999 元", "200 项测试", "30 个页面"],
+    "$unconfirmedTech": "事实源里没有、模型却爱往上凑的技术名。",
+    "unconfirmedTech": [
+      "Supabase", "\\bRLS\\b", "影刀", "Django", "Flask", "Spring", "\\bJava\\b", "\\bPHP\\b", "Laravel", "ThinkPHP",
+      "Flutter", "Kotlin", "\\bSwift\\b", "Golang", "\\bGo\\s*语言", "Angular", "Svelte", "Nuxt", "\\.NET", "C#", "C\\+\\+",
+      "Unity", "Cocos", "uni-?app", "MySQL", "Redis", "Pandas", "网关代理", "API\\s*聚合", "高并发"
+    ],
+    "$bannedClaims": "没有的经历、以及生硬的防备词。",
+    "bannedClaims": [
+      "\\d+年以上", "多年经验", "丰富经验", "模型训练", "模型微调", "成熟\\s*RAG", "大规模分布式", "团队管理", "Web3",
+      "MES", "PLC", "带领团队", "精通", "我不仅", "高度匹配", "完美符合", "不走长期坐班", "不走长期入职", "不走提成模式"
+    ],
+    "$anchorKeys": "项目锚点键：同一项目同日用量超过「当日总数 ÷ 项目数」就必须换项目讲。键名任意，值是正则。",
+    "anchorKeys": {
+      "demo-iot": "demo-iot|设备接入|设备平台|验收标准|冷启动",
+      "demo-crawler": "demo-crawler|数据采集|采集工具|断点续跑|验证码自动停",
+      "demo-miniapp": "demo-miniapp|预约小程序|微信支付|防超卖",
+      "demo-dashboard": "demo-dashboard|数据看板|下钻|图表"
+    }
+  }
+}
